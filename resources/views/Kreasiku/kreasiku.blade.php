@@ -6,6 +6,7 @@
         <header class="mb-6">
             <h1 class="text-2xl font-semibold text-gray-800">Kreasiku</h1>
             <p class="text-gray-600">Ini adalah galeri pribadi yang berisi semua karya yang telah kamu unggah.</p>
+            <p class="text-gray-600">Tunggu kreasimu disetujui oleh admin. Yuk, unggah lagi kreasimu yang lain dan kumpulan rewardmu!</p>
         </header>
         <!-- Upload Button -->
         <a href="{{ route('unggah.kreasi') }}" class="flex my-8 w-44 py-1 border-2 font-semibold bg-hulk border-hulk text-white px-8 rounded-3xl hover:bg-gradient-to-r from-black to-old-hulk">
