@@ -1,0 +1,17 @@
+{
+  "public/images/tentangkami.png": {
+    "file": "assets/tentangkami-B9Co8deQ.png",
+    "src": "public/images/tentangkami.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-DMpBLram.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-z-Rg4TxU.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
