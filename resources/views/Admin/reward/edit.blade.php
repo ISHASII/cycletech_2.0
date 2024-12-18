@@ -45,9 +45,14 @@
             </div>
 
             <!-- Tombol Submit -->
-            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
-                Update
-            </button>
+          	<div class="flex justify-between">
+              <a href="{{ route('admin.rewards.index') }}" class="bg-gray text-white px-4 py-2 rounded hover:bg-gray-600">
+                  Kembali
+              </a>
+              <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+                  Update
+              </button>
+  			</div>
         </form>
     </div>
 </div>

@@ -24,7 +24,7 @@
     </div>
 
     <!-- Poin Anda -->
-    <div class="flex justify-center items-center bg-gradient-to-r from-hulk to-hulk text-white py-4 px-6 rounded-lg mb-6">
+    <div class="flex justify-center items-center bg-hulk text-white py-4 px-6 rounded-lg mb-6">
         <h2 class="text-xl font-semibold">Poin Anda: </h2>
         <span class="text-3xl font-bold ml-3">{{ $points }}</span>
     </div>
@@ -32,7 +32,7 @@
     <!-- Cards Hadiah -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         @foreach ($rewards as $reward)
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-gradient-to-b from-birumuda to-krem rounded-lg shadow-md overflow-hidden">
             <!-- Foto Hadiah -->
             @if ($reward->foto)
                 <img src="{{ asset('storage/' . $reward->foto) }}" alt="Foto Reward" class="w-full h-40 object-cover">
@@ -52,7 +52,7 @@
                     @csrf
                     <input type="hidden" name="reward_id" value="{{ $reward->id }}">
                     <button type="submit"
-                        class="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition disabled:opacity-50"
+                        class="w-full bg-hulk text-white py-2 px-4 rounded-lg hover:bg-oldhulk transition disabled:opacity-50"
                         {{ $points >= $reward->points_required ? '' : 'disabled' }}>
                         Tukar
                     </button>

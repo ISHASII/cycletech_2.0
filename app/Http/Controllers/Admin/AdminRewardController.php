@@ -12,12 +12,12 @@ class AdminRewardController extends Controller
     public function index()
     {
         $rewards = Reward::paginate(10);
-        return view('admin.reward.index', compact('rewards'));
+        return view('Admin.reward.index', compact('rewards'));
     }
 
     public function create()
     {
-        return view('admin.reward.create');
+        return view('Admin.reward.create');
     }
 
     public function store(Request $request)
@@ -46,7 +46,7 @@ class AdminRewardController extends Controller
     public function edit($id)
     {
         $reward = Reward::findOrFail($id);
-        return view('admin.reward.edit', compact('reward'));
+        return view('Admin.reward.edit', compact('reward'));
     }
 
     public function update(Request $request, $id)

@@ -86,10 +86,10 @@
                 @csrf
                 @method('DELETE')
                 <div class="flex justify-center space-x-4">
-                    <button type="submit" class="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
+                    <button type="submit" class="px-4 py-2 border border-hulk text-hulk rounded hover:bg-red-100">
                         Ya
                     </button>
-                    <button type="button" onclick="closeOverlay()" class="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400">
+                    <button type="button" onclick="closeOverlay()" class="px-4 py-2 border border-red-600 text-red-600 rounded hover:bg-green-100">
                         Tidak
                     </button>
                 </div>

@@ -63,7 +63,7 @@ Route::prefix('nasabah')->group(function () {
 
      // Route untuk Gamification
     Route::get('/rewards', function () {
-        $nasabah = Auth::guard('nasabah')->user(); // Gunakan guard nasabah
+        $nasabah = Auth::guard('nasabah')->user();
         if (!$nasabah) {
             return redirect()->route('login.nasabah')->with('error', 'Silakan login untuk melihat hadiah.');
         }
@@ -71,8 +71,9 @@ Route::prefix('nasabah')->group(function () {
         $points = $nasabah->point->points ?? 0;
         $rewards = \App\Models\Reward::all();
 
-        return view('gamification.rewards', compact('points', 'rewards'));
+        return view('Gamification.rewards', compact('points', 'rewards'));
     })->name('nasabah.rewards');
+
 
     Route::post('/redeem-reward', [GamificationController::class, 'redeemReward'])->name('redeem.reward');
 
