@@ -21,6 +21,7 @@
     <div class="text-center mb-8 mt-10 pt-5">
         <h1 class="text-3xl font-bold text-gray-800 mb-2">Daftar Hadiah</h1>
         <p class="text-lg text-gray-600">Kumpulkan poin dan tukarkan dengan hadiah menarik!</p>
+        <p class="text-lg text-gray-600">Ayo unggah kreasimu dan dapatkan poinnya <a href="{{ route('unggah.kreasi') }}" class="text-hulk hover:text-old-hulk">disini</a></p>
     </div>
 
     <!-- Poin Anda -->
@@ -47,14 +48,17 @@
                 <h3 class="text-lg font-semibold text-gray-800">{{ $reward->name }}</h3>
                 <p class="text-gray-600 text-sm mb-4">Poin Dibutuhkan: <span class="font-bold">{{ $reward->points_required }}</span></p>
 
-                <!-- Tombol Tukar -->
-                <form method="POST" action="{{ route('redeem.reward') }}">
+                <!-- Form Klaim -->
+                <form method="POST" action="{{ route('nasabah.claims.store') }}">
                     @csrf
                     <input type="hidden" name="reward_id" value="{{ $reward->id }}">
+                    <textarea name="address" placeholder="Masukkan alamat pengiriman"
+                              class="w-full p-2 border rounded mb-4 focus:outline-none focus:ring-2 focus:ring-hulk"
+                              required></textarea>
                     <button type="submit"
                         class="w-full bg-hulk text-white py-2 px-4 rounded-lg hover:bg-oldhulk transition disabled:opacity-50"
                         {{ $points >= $reward->points_required ? '' : 'disabled' }}>
-                        Tukar
+                        Klaim
                     </button>
                 </form>
             </div>

@@ -70,6 +70,12 @@
                         <a href="{{ route('admin.rewards.index') }}" class="text-lg lg:text-xl leading-6 font-normal text-white hover:font-bold">Rewards</a>
                     </div>
                 </div>
+                <div class="flex items-center justify-between gap-4 py-4 cursor-pointer">
+                    <div class="flex items-center gap-4">
+                        <i class="bi bi-card-checklist text-white"></i>
+                        <a href="{{ route('admin.claim.index') }}" class="text-lg lg:text-xl leading-6 font-normal text-white hover:font-bold">Claim Rewards</a>
+                    </div>
+                </div>
 
                 <div class="flex items-center justify-between gap-4 mt-10 pt-10 cursor-pointer">
                     <div class="flex items-center gap-4">

@@ -88,7 +88,7 @@
     <section class="bg-gradient-to-b from-krem to-white py-12 md:py-16">
         <div class="container mx-auto text-center px-4 md:px-64">
             <h2 class="text-center text-xl md:text-2xl font-bold mb-6 md:mb-8">Apa aja sih yang bisa kamu lakukan di sini?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 feature-cards">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 feature-cards">
                 <!-- Card 1 -->
                 <div class="relative bg-white p-4 md:p-6 rounded-lg shadow-lg text-center group">
                     <div class="flex justify-center mb-4">
@@ -128,6 +128,20 @@
                     <p class="text-gray-600">Gunakan kamera untuk mendeteksi berbagai hal.</p>
                     <div class="absolute inset-0 bg-hulk flex items-center justify-center text-white p-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <p class="text-center">Yuk, belajar memilah sampah dengan benar! Coba fitur kamera deteksi sampah kami sekarang.</p>
+                    </div>
+                </div>
+
+              	<!-- Card 4 -->
+                <div class="relative bg-white p-4 md:p-6 rounded-lg shadow-lg text-center group">
+                    <div class="flex justify-center mb-4">
+                        <div class="bg-hulk text-white p-4 rounded-full w-14">
+                            <i class="bi bi-gift w-10 h-10 text-white"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Reward</h3>
+                    <p class="text-gray-600">Kumpulkan poin untuk dapat hadiahnya</p>
+                    <div class="absolute inset-0 bg-hulk flex items-center justify-center text-white p-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-center">Kreasi anda masih banyak? Ayo unggah disini dan kumpulkan poinnya. Anda dapat menukarnya dengan hadiah menarik.</p>
                     </div>
                 </div>
             </div>
@@ -251,6 +265,6 @@
         </div>
     </footer>
     </section>
-  
+
   </body>
 </html>

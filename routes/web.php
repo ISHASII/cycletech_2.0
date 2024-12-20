@@ -11,12 +11,14 @@ use App\Http\Controllers\Admin\AdminUploadArtikelController;
 use App\Http\Controllers\Admin\AdminDataAdminController;
 use App\Http\Controllers\Admin\AdminRewardController;
 use App\Http\Controllers\Admin\AdminKreasiApprovalController;
+use App\Http\Controllers\Admin\AdminClaimController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KreasiController;
 use App\Http\Controllers\NasabahKreasiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PredictionController;
 use App\Http\Controllers\GamificationController;
+use App\Http\Controllers\ClaimController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -76,6 +78,8 @@ Route::prefix('nasabah')->group(function () {
 
 
     Route::post('/redeem-reward', [GamificationController::class, 'redeemReward'])->name('redeem.reward');
+
+    Route::post('/claims', [ClaimController::class, 'store'])->name('nasabah.claims.store');
 
     // Route untuk mengunggah kreasi (otomatis tambah poin)
     Route::post('/kreasiku/store', [NasabahKreasiController::class, 'store'])->name('nasabah.kreasi.store');
@@ -207,13 +211,22 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/kreasi', [AdminKreasiController::class, 'index'])->name('kreasi.index');
     Route::delete('/kreasi/{id}', [AdminKreasiController::class, 'destroy'])->name('kreasi.destroy');
 
-     // Routes untuk Rewards
-     Route::get('/rewards', [AdminRewardController::class, 'index'])->name('rewards.index');
+    // Routes untuk Rewards
+    Route::get('/rewards', [AdminRewardController::class, 'index'])->name('rewards.index');
     Route::get('/rewards/create', [AdminRewardController::class, 'create'])->name('rewards.create');
     Route::post('/rewards', [AdminRewardController::class, 'store'])->name('rewards.store');
     Route::get('/rewards/{id}/edit', [AdminRewardController::class, 'edit'])->name('rewards.edit');
     Route::put('/rewards/{id}', [AdminRewardController::class, 'update'])->name('rewards.update');
     Route::delete('/rewards/{id}', [AdminRewardController::class, 'destroy'])->name('rewards.destroy');
+
+    // Route::get('/claims', [App\Http\Controllers\Admin\AdminClaimController::class, 'index'])->name('claim.index');
+    // Route::put('/claims/{id}/approve', [AdminClaimController::class, 'approve'])->name('approve');
+    // Route::put('/claims/{id}/reject', [AdminClaimController::class, 'reject'])->name('reject');
+
+    // Route untuk klaim hadiah
+    Route::get('/claims', [AdminClaimController::class, 'index'])->name('claim.index');
+    Route::put('/claims/{id}/approve', [AdminClaimController::class, 'approve'])->name('claim.approve');
+    Route::put('/claims/{id}/reject', [AdminClaimController::class, 'reject'])->name('claim.reject');
 
     // Data Pengguna
     Route::get('/users', [AdminPenggunaController::class, 'index'])->name('datauser.index');
